@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article | Al-Noor Quran Institute</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <meta name="description" content="" id="article-meta-description" />
+  </head>
+  <body>
+    <div data-include="/components/header.html"></div>
+    
+    <!-- Loading State -->
+    <div id="article-loading" class="loading-state">
+      <p>Loading article...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="article-error" class="error-state" style="display: none;">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Article Not Found</h1>
+          <p>The article you're looking for doesn't exist or has been removed.</p>
+          <a href="/pages/articles.html" class="btn btn-primary">Back to Articles</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Article Content -->
+    <article class="single-article" id="single-article" style="display: none;">
+      <section class="article-header">
+        <div class="container">
+          <nav class="breadcrumb">
+            <a href="/index.html">Home</a> / 
+            <a href="/pages/articles.html">Articles</a> / 
+            <span id="breadcrumb-title">Article</span>
+          </nav>
+          <div class="article-meta">
+            <span class="badge" id="article-category">Category</span>
+            <time id="article-date" datetime="">Date</time>
+          </div>
+          <h1 id="article-title">Article Title</h1>
+          <div class="article-author">
+            <span>By <strong id="article-author">Author Name</strong></span>
+          </div>
+        </div>
+      </section>
+
+      <div class="article-image-wrapper">
+        <img id="article-image" src="" alt="" style="display: none;" />
+      </div>
+
+      <main class="content-wrapper">
+        <div class="article-content">
+          <div class="article-body" id="article-body">
+            <!-- Article content will be inserted here -->
+          </div>
+
+          <div class="article-tags" id="article-tags">
+            <!-- Tags will be inserted here -->
+          </div>
+
+          <div class="article-footer">
+            <div class="article-actions">
+              <a href="/pages/articles.html" class="btn btn-outline">← Back to Articles</a>
+              <div class="share-buttons">
+                <button class="share-btn" onclick="shareArticle()" aria-label="Share article">Share</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Articles -->
+          <section class="related-articles">
+            <h2>Related Articles</h2>
+            <div class="articles-grid" id="related-articles">
+              <!-- Related articles will be inserted here -->
+            </div>
+          </section>
+        </div>
+      </main>
+    </article>
+
+    <div data-include="/components/footer.html"></div>
+
+    <!-- Static Content -->
+    <script src="/assets/data/content.js"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <!-- Article Module -->
+    <script src="/assets/js/article-detail.js" defer></script>
+  </body>
+</html>

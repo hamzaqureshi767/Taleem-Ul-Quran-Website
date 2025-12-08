@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles & Blog | Al-Noor Quran Institute</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <div data-include="/components/header.html"></div>
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag">Articles & Blog</p>
+        <h1>Insights, Guides & Inspirational Stories</h1>
+        <p>Discover articles and insights to enhance your learning journey.</p>
+      </div>
+    </section>
+    <main class="content-wrapper">
+      <!-- Search and Filter Section -->
+      <div class="blog-controls">
+        <div class="search-box">
+          <input type="text" id="article-search" placeholder="Search articles..." />
+          <button type="button" id="search-btn" aria-label="Search">🔍</button>
+        </div>
+        <div class="filter-group">
+          <button class="filter-btn active" data-category="all">All Articles</button>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div id="articles-loading" class="loading-state">
+        <p>Loading articles...</p>
+      </div>
+
+      <!-- Error State -->
+      <div id="articles-error" class="error-state" style="display: none;">
+        <p>Unable to load articles. Please try again later.</p>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="articles-grid" id="articles-grid" style="display: none;">
+        <!-- Articles will be inserted here -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="articles-empty" class="empty-state" style="display: none;">
+        <p>No articles found. Try adjusting your search or filters.</p>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination" id="pagination" style="display: none;">
+        <!-- Pagination controls will be inserted here -->
+      </div>
+    </main>
+    <div data-include="/components/footer.html"></div>
+
+    <!-- Static Content -->
+    <script src="/assets/data/content.js"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <!-- Articles Module -->
+    <script src="/assets/js/articles.js" defer></script>
+  </body>
+</html>
